@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryAction;
@@ -43,7 +44,7 @@ public abstract class MenuPagged<T> extends Menu {
 	 */
 	@Getter
 	@Setter
-	private static CompMaterial activePageButton = CompMaterial.LIME_DYE;
+	private static CompMaterial activePageButton = CompMaterial.PURPLE_DYE;
 
 	/**
 	 * The inactive page button material, used in buttons to previous/next
@@ -302,10 +303,10 @@ public abstract class MenuPagged<T> extends Menu {
 	private void setButtons() {
 
 		// Set previous button
-		this.prevButton = this.canShowPreviousButton() ? this.formPreviousButton() : Button.makeEmpty();
+		this.prevButton = this.canShowPreviousButton() ? this.formPreviousButton() : Button.makeDummy(CompMaterial.WHITE_STAINED_GLASS_PANE.toItem());
 
 		// Set next page button
-		this.nextButton = this.canShowNextButton() ? this.formNextButton() : Button.makeEmpty();
+		this.nextButton = this.canShowNextButton() ? this.formNextButton() :  Button.makeDummy(CompMaterial.WHITE_STAINED_GLASS_PANE.toItem());
 	}
 
 	/**

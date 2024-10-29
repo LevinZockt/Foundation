@@ -614,10 +614,10 @@ public class SimpleLocalization extends YamlStaticConfig {
 		/**
 		 * Keys related to menu pagination
 		 */
-		public static String PAGE_PREVIOUS = "&8<< &fPage {page}";
-		public static String PAGE_NEXT = "Page {page} &8>>";
-		public static String PAGE_FIRST = "&7First Page";
-		public static String PAGE_LAST = "&7Last Page";
+		public static String PAGE_PREVIOUS = "&8<< &Seite {page}";
+		public static String PAGE_NEXT = "Seite {page} &8>>";
+		public static String PAGE_FIRST = "&7Erste Seite";
+		public static String PAGE_LAST = "&7Letze Seite";
 
 		/**
 		 * Keys related to menu titles and tooltips

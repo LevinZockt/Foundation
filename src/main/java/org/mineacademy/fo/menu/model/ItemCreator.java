@@ -81,17 +81,19 @@ public final class ItemCreator {
 	/**
 	 * The {@link CompMaterial}, if any, to start building with. Either this, or {@link #item} must be set.
 	 */
-	@Nullable
+	@Nullable @Getter
 	private CompMaterial material;
 
 	/**
 	 * The amount of the item.
 	 */
+	@Getter
 	private int amount = -1;
 
 	/**
 	 * The item damage.
 	 */
+	@Getter
 	private int damage = -1;
 
 	/**
@@ -103,16 +105,19 @@ public final class ItemCreator {
 	/**
 	 * The lore for this item (& color codes are replaced automatically).
 	 */
+	@Getter
 	private final List<String> lores = new ArrayList<>();
 
 	/**
 	 * The enchants applied to the item.
 	 */
+	@Getter
 	private final Map<Enchantment, Integer> enchants = new HashMap<>();
 
 	/**
 	 * The {@link CompItemFlag}.
 	 */
+	@Getter
 	private final List<CompItemFlag> flags = new ArrayList<>();
 
 	/**
@@ -996,5 +1001,19 @@ public final class ItemCreator {
 		Valid.checkNotNull(mat, "Material cannot be null!");
 
 		return new ItemCreator().material(mat);
+	}
+
+	public ItemCreator clone() {
+		return ItemCreator.of(this.material)
+				.lore(this.lores)
+				.name(this.name)
+				.amount(this.amount)
+				.damage(this.damage)
+				.unbreakable(this.unbreakable)
+				.color(this.color)
+				.hideTags(this.hideTags)
+				.glow(this.glow)
+				.skullOwner(this.skullOwner)
+				.skullUrl(this.skullUrl);
 	}
 }
