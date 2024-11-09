@@ -963,7 +963,7 @@ public abstract class Menu {
 	 * @return the slot which return buttons is located on
 	 */
 	protected int getReturnButtonPosition() {
-		return this.size - 1;
+		return this.size - 8;
 	}
 
 	/**
