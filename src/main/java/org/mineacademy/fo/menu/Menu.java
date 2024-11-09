@@ -935,7 +935,7 @@ public abstract class Menu {
 	 * @return the slot which info buttons is located on
 	 */
 	protected int getInfoButtonPosition() {
-		return this.size - 9;
+		return this.size - 4;
 	}
 
 	/**
@@ -963,7 +963,7 @@ public abstract class Menu {
 	 * @return the slot which return buttons is located on
 	 */
 	protected int getReturnButtonPosition() {
-		return this.size - 8;
+		return this.size - 9;
 	}
 
 	/**
